@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: misterchef-laravel
+    env: docker
+    plan: starter
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_KEY
+        value: base64:E1dwvh6rg25V9RuZfWP3y5uqKxRERNloGmBqc5+k8lg=
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_URL
+        value: https://misterchef.onrender.com
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: yamabiko.proxy.rlwy.net
+      - key: DB_PORT
+        value: 24091
+      - key: DB_DATABASE
+        value: railway
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        value: WjBFbQCycPjJycCMpEFHRtQQqafCwMrW
+      - key: SESSION_DRIVER
+        value: database
+      - key: QUEUE_CONNECTION
+        value: database
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+      npm install
+      npm run build
+    startCommand: |
+      php artisan migrate --force
+      php artisan config:clear
+      php artisan route:clear
+      php artisan view:clear
+      php artisan serve --host 0.0.0.0 --port $PORT
