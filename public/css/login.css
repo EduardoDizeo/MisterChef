@@ -1,0 +1,116 @@
+
+body {
+    background: linear-gradient(180deg, #ffffff, #ffd1d1, #ff8095, #ff0000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #A674D6;
+}
+
+.btn-link{
+    margin-top: 20px; 
+    padding: 0px !important;
+}
+
+.profile-img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields */
+.form-control {
+    border: 2px solid #A674D6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.form-control:focus {
+    border-color: #7B52B9;
+    box-shadow: 0px 0px 8px rgba(123, 82, 185, 0.5);
+}
+
+
+.btn-primary {
+    background: #ff0000 !important;
+    border: none !important;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background: rgb(255, 255, 255) !important;
+    border: #ff0000 2px solid !important;
+    color: #ff0000 !important;
+}
+
+
+a {
+    color: black !important;  /* Negro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000 !important; /* Morado */
+}
+
+
+.login-box-msg {
+    font-size: 20px;
+    font-weight: bold;
+    color: black !important;
+}
+/* 🔲 Estilo de los campos de entrada */
+.form-control {
+    border: 1px solid #ff0000 !important; /* Borde morado */
+    border-radius: 5px;
+    padding: 5px;
+    background: rgba(246, 228, 255, 0.5); /* Fondo moradito claro */
+    color: black !important;
+}
+
+
+.form-control:focus {
+    border-color: #ff0000 !important; /* Borde morado más oscuro */
+    box-shadow: 0px 0px 8px #ff8181 !important;
+    background: rgba(240, 220, 255, 0.7); /* Un poco más oscuro al hacer focus */
+}
+
+
+.input-group-text {
+    background: #ff0000 !important; /* Rosa pastel */
+    border: 1px solid #ff0000 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.card-header {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.comando-registro{
+    display: flex;
+}
+
+.cont-comando-registro{
+    width: 100%;
+}
