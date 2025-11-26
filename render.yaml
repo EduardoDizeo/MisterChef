@@ -30,13 +30,3 @@ services:
         value: database
       - key: QUEUE_CONNECTION
         value: database
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      npm install
-      npm run build
-    startCommand: |
-      php artisan migrate --force
-      php artisan config:clear
-      php artisan route:clear
-      php artisan view:clear
-      php artisan serve --host 0.0.0.0 --port $PORT
